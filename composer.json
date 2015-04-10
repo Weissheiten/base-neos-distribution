@@ -28,7 +28,7 @@
         "typo3/typo3cr": "@dev",
         "typo3/typoscript": "@dev",
 
-        "Weissheiten/billardcafe.home" : "@dev"
+        "Weissheiten/billardcafe.home" : "dev-master"
     },
     "require-dev": {
         "typo3/buildessentials": "dev-master",

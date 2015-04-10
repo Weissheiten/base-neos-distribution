@@ -10,10 +10,10 @@ ENV \
   T3APP_NEOS_SITE_PACKAGE=Weissheiten/billardcafe.home \
   T3APP_VHOST_NAMES="neos-typostrap dev.neos-typostrap behat.dev.neos-typostrap"
 
-ENV T3APP_BUILD_REPO_URL git@bitbucket.org:Weissheiten/billardcafe.home.git
+ENV T3APP_BUILD_REPO_URL https://github.com/Weissheiten/base-neos-distribution.git
 
-ADD fwweissheiten /
+ADD repokeys/bitbucket-billardcafehome-key /
 RUN \
-  chmod 600 /fwweissheiten && \
-  echo "IdentityFile /fwweissheiten" >> /etc/ssh/ssh_config && \
-  . /build-typo3-app/pre-install-typo3-neos.sh
+  chmod 600 /bitbucket-billardcafehome-key && \
+  echo "IdentityFile /bitbucket-billardcafehome-key" >> /etc/ssh/ssh_config && \
+  . /build-typo3-app/pre-install-typo3-app.sh
