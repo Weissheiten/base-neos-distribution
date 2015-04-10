@@ -42,6 +42,8 @@
         "typo3/typo3cr": "@dev",
         "typo3/typoscript": "@dev",
 
+        "weissheiten/news": "dev-master",
+        "weissheiten/neos-bootstrap": "dev-master",
         "weissheiten/billardcafe-home" : "dev-master"
     },
     "require-dev": {
