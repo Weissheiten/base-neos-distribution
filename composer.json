@@ -6,6 +6,12 @@
         "vendor-dir": "Packages/Libraries",
         "bin-dir": "bin"
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url":  "git@bitbucket.org:Weissheiten/billardcafe.home.git"
+      }
+    ],
     "require": {
         "typo3/neos": "dev-master",
         "typo3/neos-nodetypes": "dev-master",
@@ -28,7 +34,7 @@
         "typo3/typo3cr": "@dev",
         "typo3/typoscript": "@dev",
 
-        "Weissheiten/billardcafe.home" : "dev-master"
+        "Weissheiten/billardcafe.home" : "*"
     },
     "require-dev": {
         "typo3/buildessentials": "dev-master",
@@ -44,11 +50,5 @@
         "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
-    },
-    "repositories": [
-      {
-        "type": "vcs",
-        "url":  "git@bitbucket.org:Weissheiten/billardcafe.home.git"
-      }
-    ]
+    }
 }
