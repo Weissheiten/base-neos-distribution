@@ -10,6 +10,14 @@
       {
         "type": "vcs",
         "url":  "git@bitbucket.org:Weissheiten/billardcafe.home.git"
+      },
+      {
+        "type": "vcs",
+        "url":  "https://github.com/Weissheiten/Weissheiten.Neos.Bootstrap.git"
+      },
+      {
+        "type": "vcs",
+        "url":  "https://github.com/Weissheiten/Weissheiten.News.git"
       }
     ],
     "require": {
@@ -34,7 +42,9 @@
         "typo3/typo3cr": "@dev",
         "typo3/typoscript": "@dev",
 
-        "weissheiten/billardcafe-home" : "dev-master"
+        "weissheiten/billardcafe-home" : "dev-master",
+        "weissheiten/news": "dev-master",
+        "weissheiten/neos-bootstrap": "dev-master"
     },
     "require-dev": {
         "typo3/buildessentials": "dev-master",

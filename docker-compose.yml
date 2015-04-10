@@ -14,7 +14,7 @@ db:
     MARIADB_PASS: spassw
 
 web:
-  image: million12/typo3-neos
+  image: weissheiten/base-neos-distribution
   ports:
     - '8080:80'
   links:
