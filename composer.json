@@ -10,6 +10,14 @@
       {
         "type": "vcs",
         "url":  "git@bitbucket.org:Weissheiten/billardcafe.home.git"
+      },
+      {
+        "type": "vcs",
+        "url":  "https://github.com/Weissheiten/Weissheiten.Neos.Bootstrap.git"
+      },
+      {
+        "type": "vcs",
+        "url":  "https://github.com/Weissheiten/Weissheiten.News.git"
       }
     ],
     "require": {
