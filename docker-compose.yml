@@ -1,0 +1,35 @@
+dbdata:
+  image: busybox:latest
+  command: echo dbdata
+  volumes:
+    - /home/florian/DockerSetups/BillardcafeNeos/lib/mysql:/var/lib/mysql
+
+db:
+  image: tutum/mariadb:latest
+  ports:
+    - 3306
+  volumes_from:
+    - dbdata
+  environment:
+    MARIADB_PASS: spassw
+
+web:
+  image: million12/typo3-neos
+  ports:
+    - '8080:80'
+  links:
+    - db:db
+  environment:
+    T3APP_VHOST_NAMES: neos dev.neos behat.dev.neos
+
+dev:
+  image: million12/php-app-ssh
+  ports:
+    - '1122:22'
+  links:
+    - db:db
+    - web:web
+  volumes_from:
+    - web
+  environment:
+    IMPORT_GITHUB_PUB_KEYS: weissheiten
