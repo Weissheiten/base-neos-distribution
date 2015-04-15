@@ -1,5 +1,5 @@
 {
-    "name": "weissheiten/neos-base-distribution",
+    "name": "weissheiten/base-neos-distribution",
     "description" : "TYPO3 Neos - Weissheiten Base Distribution",
     "license": "GPL-3.0+",    
     "config": {

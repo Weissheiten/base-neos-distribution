@@ -20,8 +20,8 @@ web:
   links:
     - db:db
   environment:
+    T3APP_BUILD_REPO_URL: 'https://github.com/Weissheiten/base-neos-distribution.git'
     T3APP_VHOST_NAMES: 'neos dev.neos behat.dev.neos'
-    #T3APP_NEOS_SITE_PACKAGE: 'TYPO3.NeosDemoTypo3Org'
     T3APP_NEOS_SITE_PACKAGE: 'Billardcafe.Home'
     T3APP_NEOS_SITE_PACKAGE_FORCE_REIMPORT: 'false'
 
