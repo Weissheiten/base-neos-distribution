@@ -13,14 +13,21 @@ db:
   environment:
     MARIADB_PASS: spassw
 
+webdata:
+  image: busybox:latest
+  command: echo webdata
+  volumes:
+    - /home/florian/DockerSetups/BillardcafeNeos/data:/data
+
 web:
   image: weissheiten/base-neos-distribution
   ports:
     - '8080:80'
   links:
     - db:db
+  volumes_from:
+    - webdata
   environment:
-    T3APP_BUILD_REPO_URL: 'https://github.com/Weissheiten/base-neos-distribution.git'
     T3APP_VHOST_NAMES: 'neos dev.neos behat.dev.neos'
     T3APP_NEOS_SITE_PACKAGE: 'Billardcafe.Home'
     T3APP_NEOS_SITE_PACKAGE_FORCE_REIMPORT: 'false'
