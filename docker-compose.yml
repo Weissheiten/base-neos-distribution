@@ -19,7 +19,7 @@ webdataDEV:
   volumes:
     - /home/florian/DockerSetups/NeosDev/data:/data
 
-webDEVdock:
+webDEV:
   image: weissheiten/base-neos-distribution
   ports:
     - '8080:80'
