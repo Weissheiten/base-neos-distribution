@@ -1,45 +1,45 @@
-dbdataDEV:
+129dbdataDEV:
   image: busybox:latest
   command: echo dbdata
   volumes:
-    - /home/florian/DockerSetups/NeosDev/lib/mysql:/var/lib/mysql
+    - /home/florian/DockerSetups/NeosDev129/lib/mysql:/var/lib/mysql
 
-dbDEV:
+129dbDEV:
   image: tutum/mariadb:latest
   ports:
     - 3306
   volumes_from:
-    - dbdataDEV
+    - 129dbdataDEV
   environment:
     MARIADB_PASS: spassw
 
-webdataDEV:
+129webdataDEV:
   image: busybox:latest
-  command: echo webdataDEV
+  command: echo 129webdataDEV
   volumes:
-    - /home/florian/DockerSetups/NeosDev/data:/data
+    - /home/florian/DockerSetups/NeosDev129/data:/data
 
-webDEV:
-  image: weissheiten/base-neos-distribution
+129webDEV:
+  image: weissheiten/base-neos-distribution-1p2p9
   ports:
     - '8080:80'
   links:
-    - dbDEV:dbDEV
+    - 129dbDEV:db
   volumes_from:
-    - webdataDEV
+    - 129webdataDEV
   environment:
     T3APP_VHOST_NAMES: 'neos dev.neos behat.dev.neos'
     T3APP_NEOS_SITE_PACKAGE: 'Billardcafe.Home'
     T3APP_NEOS_SITE_PACKAGE_FORCE_REIMPORT: 'false'
 
-devDEV:
+129devDEV:
   image: million12/php-app-ssh
   ports:
     - '1122:22'
   links:
-    - dbDEV:dbDEV
-    - webDEV:webDEV
+    - 129dbDEV:db
+    - 129webDEV:web
   volumes_from:
-    - webDEV
+    - 129webDEV
   environment:
     IMPORT_GITHUB_PUB_KEYS: weissheiten
