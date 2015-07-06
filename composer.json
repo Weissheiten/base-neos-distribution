@@ -27,8 +27,6 @@
         "doctrine/migrations": "1.0.0-alpha3",
         "typo3/flow": "2.3.*",       
       
-        "weissheiten/news": "dev-master",
-        "weissheiten/neos-bootstrap": "1.2.*",  
         "weissheiten/billardcafe-home" : "1.2.*"
     },
     "require-dev": {
