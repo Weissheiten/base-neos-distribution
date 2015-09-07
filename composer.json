@@ -1,6 +1,7 @@
 {
     "name": "weissheiten/base-neos-distribution",
     "description" : "TYPO3 Neos - Weissheiten Base Distribution",
+    "version" : "2.0.0",
     "license": "GPL-3.0+",    
     "config": {
         "vendor-dir": "Packages/Libraries",
