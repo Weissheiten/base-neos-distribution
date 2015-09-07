@@ -24,7 +24,7 @@ webDEV:
   ports:
     - '8080:80'
   links:
-    - dbDEV:dbDEV
+    - dbDEV:db
   volumes_from:
     - webdataDEV
   environment:

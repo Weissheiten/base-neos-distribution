@@ -1,39 +1,32 @@
 {
-    "name": "typo3/neos-base-distribution",
-    "description" : "TYPO3 Neos Base Distribution",
-    "license": "GPL-3.0+",
-    "support": {
-        "email": "neos@typo3.org",
-        "irc": "irc://irc.freenode.org/typo3-neos",
-        "forum": "http://forum.typo3.org/index.php/f/121/",
-        "issues": "https://jira.typo3.org/",
-        "source": "https://git.typo3.org/"
-    },
+    "name": "weissheiten/base-neos-distribution",
+    "description" : "TYPO3 Neos - Weissheiten Base Distribution",
+    "license": "GPL-3.0+",    
     "config": {
         "vendor-dir": "Packages/Libraries",
         "bin-dir": "bin"
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url":  "git@bitbucket.org:Weissheiten/billardcafe.home.git"
+      },
+      {
+        "type": "vcs",
+        "url":  "https://github.com/Weissheiten/Weissheiten.Neos.Bootstrap.git"
+      },
+      {
+        "type": "vcs",
+        "url":  "https://github.com/Weissheiten/Weissheiten.News.git"
+      }
+    ],
     "require": {
-        "typo3/neos": "dev-master",
-        "typo3/neos-nodetypes": "dev-master",
-        "typo3/neosdemotypo3org": "dev-master",
-        "typo3/neos-kickstarter": "dev-master",
+        
 
-        "doctrine/migrations": "@dev",
-
-        "typo3/eel": "@dev",
-        "typo3/flow": "@dev",
-        "typo3/fluid": "@dev",
-        "typo3/party": "@dev",
-        "typo3/kickstart": "@dev",
-        "typo3/neos-seo": "@dev",
-        "typo3/imagine": "@dev",
-        "typo3/media": "@dev",
-        "typo3/twitter-bootstrap": "@dev",
-        "typo3/form": "@dev",
-        "typo3/setup": "@dev",
-        "typo3/typo3cr": "@dev",
-        "typo3/typoscript": "@dev"
+        "weissheiten/news": "dev-master",
+        "weissheiten/neos-bootstrap": "dev-master",
+        "weissheiten/billardcafe-home" : "2.0.*",
+        "typo3/neos-base-distribution": "^2.0"
     },
     "require-dev": {
         "typo3/buildessentials": "dev-master",
