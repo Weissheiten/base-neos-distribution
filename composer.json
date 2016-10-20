@@ -9,10 +9,6 @@
     "repositories": [
       {
         "type": "vcs",
-        "url": "https://Weissheiten@bitbucket.org/Weissheiten/billardcafe.home.git"
-      },
-      {
-        "type": "vcs",
         "url": "https://github.com/Weissheiten/Weissheiten.Neos.News.git"
       },
       {
