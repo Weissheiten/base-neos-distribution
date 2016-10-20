@@ -1,23 +1,9 @@
-dbdataDEV:
-  image: busybox:latest
-  command: echo dbdata
-  volumes:
-    - /home/florian/DockerSetups/NeosDev/lib/mysql:/var/lib/mysql
-
 dbDEV:
-  image: tutum/mariadb:latest
+  image: million12/mariadb:latest
   ports:
     - 3306
-  volumes_from:
-    - dbdataDEV
   environment:
-    MARIADB_PASS: spassw
-
-webdataDEV:
-  image: busybox:latest
-  command: echo webdataDEV
-  volumes:
-    - /home/florian/DockerSetups/NeosDev/data:/data
+    MARIADB_PASS: devsecretpassw
 
 webDEV:
   image: weissheiten/base-neos-distribution
@@ -25,8 +11,6 @@ webDEV:
     - '8080:80'
   links:
     - dbDEV:db
-  volumes_from:
-    - webdataDEV
   environment:
     T3APP_VHOST_NAMES: 'neos dev.neos behat.dev.neos'
     T3APP_NEOS_SITE_PACKAGE: 'Billardcafe.Home'
@@ -37,8 +21,8 @@ devDEV:
   ports:
     - '1122:22'
   links:
-    - dbDEV:dbDEV
-    - webDEV:webDEV
+    - dbDEV:db
+    - webDEV:web
   volumes_from:
     - webDEV
   environment:

@@ -1,7 +1,6 @@
 {
     "name": "weissheiten/base-neos-distribution",
     "description" : "TYPO3 Neos - Weissheiten Base Distribution",
-    "version" : "2.0.0",
     "license": "GPL-3.0+",    
     "config": {
         "vendor-dir": "Packages/Libraries",
@@ -10,22 +9,45 @@
     "repositories": [
       {
         "type": "vcs",
-        "url":  "git@bitbucket.org:Weissheiten/billardcafe.home.git"
+        "url": "https://Weissheiten@bitbucket.org/Weissheiten/billardcafe.home.git"
       },
       {
         "type": "vcs",
-        "url":  "https://github.com/Weissheiten/Weissheiten.Neos.Bootstrap.git"
+        "url": "https://github.com/Weissheiten/Weissheiten.Neos.News.git"
       },
       {
         "type": "vcs",
-        "url":  "https://github.com/Weissheiten/Weissheiten.News.git"
+        "url": "https://github.com/Weissheiten/Weissheiten.Neos.InstagramMedia.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/Weissheiten/Weissheiten.OAuth2.ClientInstagram.git"
       }
     ],
-    "require": {        
-	"typo3/neos-base-distribution": "^2.0",
-        "weissheiten/news": "dev-master",
-        "weissheiten/neos-bootstrap": "dev-master",
-        "weissheiten/billardcafe-home" : "2.0.*"      
+  "require": {
+      "typo3/neos": "~2.3.0",
+      "typo3/neos-nodetypes": "~2.3.0",
+      "typo3/neos-kickstarter": "~2.3.0",
+
+      "typo3/neos-seo": "~1.0",
+      "typo3/setup": "~2.0",
+      "flowpack/neos-frontendlogin": "~2.0",
+      "neos/redirecthandler-neosadapter": "~1.0",
+      "neos/redirecthandler-databasestorage": "~1.0",
+
+      "typo3/neos-googleanalytics":"^1.0",
+      "moc/notfound":"~2.0",
+
+      "flowpack/oauth2-client": "dev-master",
+      "weissheiten/oauth2-clientinstagram": "dev-master",
+
+      "weissheiten/neos-bootstrap":"dev-master",
+      "weissheiten/neos-news":"dev-master",
+      "weissheiten/billardcafe-home":"dev-master",
+      "networkteam/neos-mailobfuscator": "^1.0",
+      "weissheiten/neos-instagrammedia": "dev-master",
+      "weissheiten/neos-nodemigration": "^1.0",
+      "typo3/swiftmailer": "^5.4"
     },
     "require-dev": {
         "typo3/buildessentials": "dev-master",
