@@ -43,7 +43,6 @@
 
       "weissheiten/neos-bootstrap":"dev-master",
       "weissheiten/neos-news":"dev-master",
-      /* "weissheiten/billardcafe-home":"dev-master", */
       "networkteam/neos-mailobfuscator": "^1.0",
       "weissheiten/neos-instagrammedia": "dev-master",
       "weissheiten/neos-nodemigration": "^1.0",
