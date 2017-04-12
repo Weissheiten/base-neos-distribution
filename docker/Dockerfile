@@ -1,11 +1,11 @@
-FROM million12/typo3-flow-neos-abstract:latest
+FROM million12/typo3-flow-neos-abstract:2.0
 MAINTAINER Marcin Ryzycki marcin@m12.io
 
 # ENV: Install following TYPO3 Neos version
 # ENV: Repository for installed TYPO3 Neos distribution
 ENV \ 
 T3APP_BUILD_REPO_URL="https://github.com/Weissheiten/base-neos-distribution.git" \
-T3APP_BUILD_BRANCH=2.0 \
+# T3APP_BUILD_BRANCH=2.0 \
 T3APP_NEOS_SITE_PACKAGE=Billardcafe.Home
 
 ADD repokeys/bitbucket-billardcafehome-key2 /
