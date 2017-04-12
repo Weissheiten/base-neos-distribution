@@ -6,7 +6,7 @@ dbDEV:
     MARIADB_PASS: devsecretpassw
 
 webDEV:
-  image: weissheiten/base-neos-distribution
+  image: billardcafe/base-neos-distribution
   ports:
     - '8080:80'
   links:
