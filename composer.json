@@ -1,7 +1,7 @@
 {
-    "name": "weissheiten/base-neos-distribution",
-    "description" : "TYPO3 Neos - Weissheiten Base Distribution",
-    "license": "GPL-3.0+",    
+    "name": "billardcafe/base-neos-distribution",
+    "description" : "Neos - billardcafe Base Distribution",
+    "license": "GPL-3.0+",
     "config": {
         "vendor-dir": "Packages/Libraries",
         "bin-dir": "bin"
@@ -24,7 +24,7 @@
         "url": "https://github.com/Weissheiten/Weissheiten.OAuth2.ClientInstagram.git"
       }
     ],
-  "require": {
+    "require": {
       "typo3/neos": "~2.3.0",
       "typo3/neos-nodetypes": "~2.3.0",
       "typo3/neos-kickstarter": "~2.3.0",
@@ -39,21 +39,15 @@
       "moc/notfound":"~2.0",
 
       "flowpack/oauth2-client": "dev-master",
-      "weissheiten/oauth2-clientinstagram": "dev-master",
+      "weissheiten/oauth2-clientinstagram": "~1.0",
 
-      "weissheiten/neos-bootstrap":"dev-master",
-      "weissheiten/neos-news":"dev-master",
-      "weissheiten/billardcafe-home":"~3.0",
+      "weissheiten/neos-bootstrap":"~2.1",
+      "weissheiten/neos-news":"~2.2",
+      "weissheiten/billardcafe-home":"~3.1",
       "networkteam/neos-mailobfuscator": "^1.0",
-      "weissheiten/neos-instagrammedia": "dev-master",
+      "weissheiten/neos-instagrammedia": "~1.0",
       "weissheiten/neos-nodemigration": "^1.0",
       "typo3/swiftmailer": "^5.4"
-    },
-    "require-dev": {
-        "typo3/buildessentials": "dev-master",
-        "mikey179/vfsstream": "1.4.*",
-        "phpunit/phpunit": "4.5.*",
-        "flowpack/behat": "dev-master"
     },
     "suggest": {
         "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
